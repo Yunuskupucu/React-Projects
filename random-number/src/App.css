@@ -1,0 +1,82 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  background-color: lightgray;
+  color: black;
+}
+
+.App .container {
+  min-width: 400px;
+  margin: auto;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #b55050;
+  border: 2px solid black;
+  border-radius: 25px;
+}
+
+.App .container .randomNumber {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-weight: bold;
+  padding: 20px;
+  min-width: 100%;
+}
+
+.App .container .randomNumber span {
+  margin-left: 10px;
+  font-size: 1.6rem;
+}
+
+.App .numContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px 0px 10px 0px;
+  min-width: 100%;
+}
+
+.App .container div {
+  width: 100%;
+  max-width: 42%;
+}
+
+.App .container div input {
+  padding: 10px;
+  margin-bottom: 20px;
+  border: none;
+  outline: none;
+  width: 100%;
+  background-color: #fff;
+  color: black;
+  font-weight: bold;
+}
+
+.App .container .btn button {
+  font-weight: bold;
+  border: 1px solid;
+  outline: none;
+  border-radius: 10px;
+  color: black;
+  width: 100%;
+  font-size: 1rem;
+  padding: 15px;
+  cursor: pointer;
+  background-color: lightgray;
+}
+
+.App .container .btn button:hover {
+  background-color: black;
+  color: white;
+}
