@@ -8,6 +8,11 @@
   background-color: #0f1b21;
 }
 
+img {
+  width: 100px;
+  height: 100px;
+}
+
 .container {
   text-align: center;
 }
@@ -31,7 +36,7 @@
 .reset {
   width: 150px;
   height: 45px;
-  color: #ffd900;
+  color: burlywood;
   border: none;
   background-color: #0b5679;
   border-radius: 30px;
@@ -41,7 +46,7 @@
 }
 
 .reset:hover {
-  background-color: #ffd900;
+  background-color: burlywood;
   color: #08202b;
 }
 
