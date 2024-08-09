@@ -9,17 +9,19 @@ function App() {
 
   let calcBmi = (event) => {
     event.preventDefault();
-    if (weight == 0 || height == 0) {
+    if (weight === 0 || height === 0) {
       alert("Please enter weight and height...");
     } else {
-      let bmi = weight / (height * height);
+      let heightInMeters = height / 100;
+      let bmi = weight / (heightInMeters * heightInMeters);
       setBmi(bmi.toFixed(1));
+      console.log(bmi);
 
       if (bmi <= 18) {
         setMessage("You are WEAK.");
-      } else if (bmi <= 25 && bmi >= 18) {
+      } else if (bmi > 18 && bmi <= 25) {
         setMessage("You are NORMAL.");
-      } else if (bmi <= 30 && bmi >= 25) {
+      } else if (bmi > 25 && bmi <= 30) {
         setMessage("You are FAT.");
       } else {
         setMessage("You are OBESE.");
