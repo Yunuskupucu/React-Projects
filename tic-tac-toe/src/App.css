@@ -21,7 +21,11 @@
 }
 
 .winState {
-  color: #fff;
+  font-size: 2.5rem;
+  background-color: burlywood;
+  color: #0f1b21;
+  border-radius: 20px;
+  padding: 10px 0px;
 }
 
 .reset {
