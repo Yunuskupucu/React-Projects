@@ -1,0 +1,96 @@
+* {
+  box-sizing: border-box;
+}
+
+h2 {
+  text-align: center;
+}
+
+input {
+  border: 2px solid;
+  font-size: 1rem;
+  height: fit-content;
+  margin-left: 10px;
+  padding: 5px;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  margin: 50px;
+}
+
+.add-item {
+  display: flex;
+  justify-content: center;
+  width: 600px;
+  border: 3px solid;
+  border-radius: 20px;
+  padding: 50px;
+}
+
+.item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.quantity {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.add-btn {
+  width: 100%;
+  padding: 10px 0px;
+  margin-top: 20px;
+  font-size: 1.4rem;
+  border: none;
+  border-radius: 20px;
+}
+
+.shopping-list {
+  margin: 20px;
+}
+
+ul {
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 1.6rem;
+  margin-left: 350px;
+}
+
+.list-grid {
+  width: 600px;
+}
+
+.list-grid:hover {
+  background-color: lightgray;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: #999;
+}
+
+.check-delete-btn {
+  display: flex;
+}
+
+.delete-btn {
+  border: none;
+  background: none;
+  font-size: 1.2rem;
+}

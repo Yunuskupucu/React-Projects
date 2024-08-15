@@ -1,4 +1,4 @@
-# React Projects 
+# React Projects
 <hr/>
 
 ## BMI Calculator
@@ -21,4 +21,3 @@
 <hr/>
 <img width="1440" alt="Ekran Resmi 2024-08-09 21 52 07" src="https://github.com/user-attachments/assets/3f6e0d62-f0cc-404d-b3e9-6476dfcca496">
 <hr/>
-
