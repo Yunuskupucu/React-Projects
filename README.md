@@ -21,3 +21,9 @@
 <hr/>
 <img width="1440" alt="Ekran Resmi 2024-08-09 21 52 07" src="https://github.com/user-attachments/assets/3f6e0d62-f0cc-404d-b3e9-6476dfcca496">
 <hr/>
+
+## Shopping List
+<br/>
+<img width="1440" alt="Ekran Resmi 2024-08-15 16 04 47" src="https://github.com/user-attachments/assets/2b71a79b-cf01-4b5f-bbd6-bcf8104dc1e8">
+<hr/>
+
