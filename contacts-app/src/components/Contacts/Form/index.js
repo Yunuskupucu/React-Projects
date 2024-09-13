@@ -1,6 +1,7 @@
 import { useState } from "react";
+import "../style.css";
 
-function Form() {
+function Form({ addContact, contacts }) {
   const [form, setForm] = useState({ fullname: "", phone_number: "" });
 
   const onChangeInput = (e) => {
@@ -12,7 +13,9 @@ function Form() {
     if (form.fullname === "" || form.phone_number === "") {
       return false;
     }
-    console.log(form);
+    addContact([...contacts, form]);
+
+    setForm({ fullname: "", phone_number: "" });
   };
 
   return (
@@ -20,6 +23,7 @@ function Form() {
       <div>
         <input
           name="fullname"
+          value={form.fullname}
           placeholder="Full Name"
           onChange={onChangeInput}
         />
@@ -27,11 +31,14 @@ function Form() {
       <div>
         <input
           name="phone_number"
+          value={form.phone_number}
           placeholder="Number"
           onChange={onChangeInput}
         />
       </div>
-      <button>Add</button>
+      <div className="btn-div">
+        <button className="btn">Add</button>
+      </div>
     </form>
   );
 }
