@@ -4,8 +4,11 @@ import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
   signOut,
+  onAuthStateChanged,
 } from "firebase/auth";
 import toast from "react-hot-toast";
+import store from "./store";
+import { login as loginHandle, logout as logoutHandle } from "./store/auth";
 
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_API_KEY,
@@ -50,5 +53,15 @@ export const logout = async () => {
     toast.error(error.message);
   }
 };
+
+onAuthStateChanged(auth, (user) => {
+  if (user) {
+    // kullanıcı oturum açtığında
+    store.dispatch(loginHandle(user));
+  } else {
+    // kullanıcı oturumu kapattığında
+    store.dispatch(logoutHandle());
+  }
+});
 
 export default app;

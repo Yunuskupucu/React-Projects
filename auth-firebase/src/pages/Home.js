@@ -4,13 +4,14 @@ import { logout } from "../firebase";
 import { useDispatch } from "react-redux";
 import { logout as logoutHandle } from "../store/auth";
 import { useNavigate } from "react-router-dom";
+
 export default function Home() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const { user } = useSelector((state) => state.auth);
 
   const handleLogout = async () => {
-    await logout;
+    await logout();
     dispatch(logoutHandle());
     navigate("/login", {
       replace: true,

@@ -1,22 +1,21 @@
 import { useState } from "react";
 import { login } from "../firebase";
 import { useNavigate } from "react-router-dom";
-import { useDispatch } from "react-redux";
-import { login as loginHandle } from "../store/auth";
 
 export default function Register() {
   const navigate = useNavigate();
-  const dispatch = useDispatch();
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     const user = await login(email, password);
-    dispatch(loginHandle(user));
-    navigate("/", {
-      replace: true,
-    });
+    if (user) {
+      navigate("/", {
+        replace: true,
+      });
+    }
   };
   return (
     <form
