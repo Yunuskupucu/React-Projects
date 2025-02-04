@@ -1,11 +1,20 @@
 import Search from './Search';
+import Brand from './Brand';
+import MainContext from '../MainContext';
+import { useContext } from 'react';
 
 const Content = () => {
+  const { brands } = useContext(MainContext);
   return (
     <main className="content">
-      <div className="header">
+      <header className="header">
         <Search />
-      </div>
+      </header>
+      <section className="brands">
+        {brands.map((brand) => (
+          <Brand brand={brand} />
+        ))}
+      </section>
     </main>
   );
 };
