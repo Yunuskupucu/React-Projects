@@ -57,10 +57,14 @@ body {
 
 .content {
   flex: 1;
+  overflow: auto;
   .header {
     height: 60px;
     border-bottom: 1px solid #ccc;
     display: flex;
+    background: #fff;
+    position: sticky;
+    top: 0;
     .search {
       flex: 1;
       position: relative;
@@ -86,6 +90,10 @@ body {
         font-size: 16px;
       }
     }
+  }
+
+  .brands {
+    padding: 25px;
   }
 }
 
