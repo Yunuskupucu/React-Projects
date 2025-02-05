@@ -27,8 +27,9 @@ const Brand = ({ brand }) => {
     >
       <h5 onClick={toggleSelected}>{brand.title}</h5>
       <div className="brand-colors">
-        {brand.colors.map((color) => (
+        {brand.colors.map((color, index) => (
           <ClipboardButton
+            key={index}
             data-clipboard-text={`#${color}`}
             onSuccess={() => setColor(color)}
             component="span"
@@ -37,7 +38,7 @@ const Brand = ({ brand }) => {
               '--textColor': `${getContrastYIQ(color)}`,
             }}
           >
-            {color}
+            #{color}
           </ClipboardButton>
         ))}
       </div>
