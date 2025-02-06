@@ -5,14 +5,7 @@ import Content from './components/Content';
 import BrandsData from './brands.json';
 import { useEffect, useState } from 'react';
 import Copied from './components/Copied';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  useRouteMatch,
-  useParams,
-} from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Collection from './components/Collection';
 
 function App() {
@@ -59,14 +52,10 @@ function App() {
         {copied && <Copied color={copied} />}
         <Sidebar />
         <Router>
-          <Switch>
-            <Route path="/" exact>
-              <Content />
-            </Route>
-            <Route path="/collection/:slugs">
-              <Collection />
-            </Route>
-          </Switch>
+          <Routes>
+            <Route path="/" element={<Content />} />
+            <Route path="/collection/:slugs" element={<Collection />} />
+          </Routes>
         </Router>
       </MainContext.Provider>
     </>
