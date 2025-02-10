@@ -1,19 +1,15 @@
 import { Grid } from '@mui/material';
+import Elements from './components/Elements';
 
 function App() {
   return (
     <>
       <Grid container spacing={2} sx={{ height: '100vh' }}>
-        <Grid item xs={4} sx={{ backgroundColor: 'lightblue', height: '100%' }}>
+        <Grid xs={4} sx={{ backgroundColor: 'black', height: '100%' }}>
           Sol İçerik
         </Grid>
-
-        <Grid
-          item
-          xs={8}
-          sx={{ backgroundColor: 'lightgreen', height: '100%' }}
-        >
-          Sağ İçerik
+        <Grid xs={8}>
+          <Elements />
         </Grid>
       </Grid>
     </>
