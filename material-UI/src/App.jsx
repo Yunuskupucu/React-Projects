@@ -1,7 +1,11 @@
 import {
+  Avatar,
+  AvatarGroup,
+  Backdrop,
   Button,
   ButtonGroup,
   Checkbox,
+  CircularProgress,
   Fab,
   IconButton,
   Input,
@@ -18,10 +22,19 @@ import Badge, { badgeClasses } from '@mui/material/Badge';
 import ChatBubbleIcon from '@mui/icons-material/ChatBubble';
 import CloudUploadIcon from '@mui/icons-material/CloudUpload';
 import EditIcon from '@mui/icons-material/Edit';
-import { green, grey } from '@mui/material/colors';
+import { deepPurple, green, grey } from '@mui/material/colors';
+import avatar from './assets/avatar.jpeg';
 
 function App() {
   const [loading, setLoading] = useState(false);
+
+  const [open, setOpen] = useState(false);
+  const handleClose = () => {
+    setOpen(false);
+  };
+  const handleOpen = () => {
+    setOpen(true);
+  };
 
   const CartBadge = styled(Badge)`
     & .${badgeClasses.badge} {
@@ -200,6 +213,37 @@ function App() {
       </div>
       <div>
         <Input error inputProps={{ 'aria-label': 'controlled' }} />
+      </div>
+      <div>
+        <Avatar
+          alt="Yunus Emre Küpücü"
+          src={avatar}
+          sx={{ width: 56, height: 56 }}
+        />
+        <Avatar
+          variant="rounded"
+          sx={{ bgcolor: deepPurple[500], marginLeft: '30px' }}
+        >
+          YEK
+        </Avatar>
+      </div>
+      <div>
+        <AvatarGroup total={24}>
+          <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
+          <Avatar alt="Travis Howard" src="/static/images/avatar/2.jpg" />
+          <Avatar alt="Agnes Walker" src="/static/images/avatar/4.jpg" />
+          <Avatar alt="Trevor Henderson" src="/static/images/avatar/5.jpg" />
+        </AvatarGroup>
+      </div>
+      <div>
+        <Button onClick={handleOpen}>Show backdrop</Button>
+        <Backdrop
+          sx={(theme) => ({ color: '#fff', zIndex: theme.zIndex.drawer + 1 })}
+          open={open}
+          onClick={handleClose}
+        >
+          <CircularProgress color="inherit" />
+        </Backdrop>
       </div>
     </div>
   );
