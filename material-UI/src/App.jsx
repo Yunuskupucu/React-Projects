@@ -1,4 +1,12 @@
-import { Button, ButtonGroup, Checkbox, IconButton } from '@mui/material';
+import {
+  Button,
+  ButtonGroup,
+  Checkbox,
+  Fab,
+  IconButton,
+  Rating,
+  TextField,
+} from '@mui/material';
 import './App.css';
 import { BsSend } from 'react-icons/bs';
 import { MdDelete } from 'react-icons/md';
@@ -8,7 +16,8 @@ import { styled } from '@mui/material/styles';
 import Badge, { badgeClasses } from '@mui/material/Badge';
 import ChatBubbleIcon from '@mui/icons-material/ChatBubble';
 import CloudUploadIcon from '@mui/icons-material/CloudUpload';
-import { pink } from '@mui/material/colors';
+import EditIcon from '@mui/icons-material/Edit';
+import { green, grey } from '@mui/material/colors';
 
 function App() {
   const [loading, setLoading] = useState(false);
@@ -105,11 +114,43 @@ function App() {
       {/* checkbox */}
       <Checkbox
         inputProps={{ 'aria-label': 'controlled' }}
-        defaultChecked
         sx={{
-          color: pink[800],
+          color: green[800], //çerçeve rengi
           '&.Mui-checked': {
-            color: pink[600],
+            color: grey[600], // işaret rengi
+          },
+        }}
+      />
+      <Checkbox defaultChecked color="success" />
+      {/* FAB Button */}
+      <Fab aria-label="edit">
+        <EditIcon />
+      </Fab>
+      {/* Rating */}
+      <Rating name="size-large" defaultValue={2} size="large" />
+      {/* Text Field */}
+      <TextField
+        id="outlined-basic"
+        label="Ad Soyad"
+        variant="outlined"
+        sx={{
+          '&.Mui-focused fieldset': {
+            borderBottom: '3px solid red',
+          },
+        }}
+      />
+      <br /> <br />
+      <TextField
+        fullWidth
+        id="outlined-basic"
+        label="Ad Soyad"
+        variant="outlined"
+        sx={{
+          '& .MuiOutlinedInput-root': {
+            '&.Mui-focused fieldset': {
+              borderColor: 'transparent', // Tüm sınırları kaldır
+              borderBottom: '3px solid red', // Sadece alt kenarı belirle
+            },
           },
         }}
       />
