@@ -226,7 +226,6 @@ const Elements = () => {
           }}
         />
       </div>
-
       <div>
         <Input
           defaultValue="Hello world"
