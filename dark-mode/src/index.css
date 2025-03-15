@@ -7,7 +7,7 @@
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  background: #fef1f0;
+  background: #336aad;
   color: #0d0d0d;
   margin: 0px;
   overflow: visible;
@@ -17,7 +17,7 @@
 }
 
 .header.dark {
-  background: #333;
+  background: #2f2f2f;
   color: #fff;
 }
 
@@ -27,7 +27,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #ff8e3c;
+  background-color: rgba(176, 176, 176, 0.3);
   border-radius: 50%;
 }
 
